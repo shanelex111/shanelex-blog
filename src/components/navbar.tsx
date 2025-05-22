@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Search, Sun, Moon } from "lucide-react";
 import { Button } from "./ui/button";
 import { SiGithub } from "react-icons/si";
+import { navItems } from "@/config/nav";
 
 export function Navbar() {
   return (
@@ -14,30 +15,15 @@ export function Navbar() {
           </Link>
         </div>
         <nav className="gap-8 md:flex hidden items-center font-medium text-lg">
-          <Link
-            href="/"
-            className="transition-colors hover:text-primary nav-link"
-          >
-            首页
-          </Link>
-          <Link
-            href="/articles"
-            className="transition-colors hover:text-primary nav-link"
-          >
-            文章
-          </Link>
-          <Link
-            href="/projects"
-            className="transition-colors hover:text-primary nav-link"
-          >
-            项目
-          </Link>
-          <Link
-            href="/about"
-            className="transition-colors hover:text-primary nav-link"
-          >
-            关于
-          </Link>
+          {navItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="transition-colors hover:text-primary nav-link"
+            >
+              {item.title}
+            </Link>
+          ))}
         </nav>
         <div className="items-center gap-2 flex">
           <Button
