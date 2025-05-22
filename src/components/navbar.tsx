@@ -14,7 +14,7 @@ export function Navbar() {
             ShaneLex
           </Link>
         </div>
-        <nav className="gap-8 md:flex hidden items-center font-medium text-lg">
+        <nav className="gap-16 md:flex hidden items-center text-lg">
           {navItems.map((item) => (
             <Link
               key={item.href}
@@ -25,7 +25,7 @@ export function Navbar() {
             </Link>
           ))}
         </nav>
-        <div className="items-center gap-2 flex">
+        <div className="items-center gap-6 flex">
           <Button
             size="icon"
             variant="ghost"
