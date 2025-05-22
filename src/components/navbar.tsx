@@ -12,22 +12,28 @@ export function Navbar() {
           </Link>
         </div>
         <nav className="gap-8 md:flex hidden items-center font-medium text-lg">
-          <Link href="/" className="transition-colors hover:text-primary">
+          <Link
+            href="/"
+            className="transition-colors hover:text-primary nav-link"
+          >
             首页
           </Link>
           <Link
             href="/articles"
-            className="transition-colors hover:text-primary "
+            className="transition-colors hover:text-primary nav-link"
           >
             文章
           </Link>
           <Link
             href="/projects"
-            className="transition-colors hover:text-primary "
+            className="transition-colors hover:text-primary nav-link"
           >
             项目
           </Link>
-          <Link href="/about" className="transition-colors hover:text-primary ">
+          <Link
+            href="/about"
+            className="transition-colors hover:text-primary nav-link"
+          >
             关于
           </Link>
         </nav>
