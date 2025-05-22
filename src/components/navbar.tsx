@@ -3,11 +3,8 @@ import Link from "next/link";
 import { Search, Sun, Moon } from "lucide-react";
 import { Button } from "./ui/button";
 import { SiGithub } from "react-icons/si";
-import { useTheme } from "next-themes";
 
 export function Navbar() {
-  const { theme, setTheme } = useTheme();
-
   return (
     <header className="w-full border-b bg-background/95 backdrop-blur sticky top-0 z-50">
       <div className="container mx-auto flex justify-between items-center h-16">
@@ -63,20 +60,6 @@ export function Navbar() {
               <SiGithub className="h-5 w-5 transition-transform group-hover:scale-110" />
             </Button>
           </a>
-          <Button
-            size="icon"
-            variant="ghost"
-            className="transition-all hover:text-primary group"
-            onClick={() => {
-              setTheme(theme === "dark" ? "light" : "dark");
-            }}
-          >
-            {theme === "dark" ? (
-              <Sun className="h-5 w-5 transition-transform group-hover:scale-110" />
-            ) : (
-              <Moon className="h-5 w-5 transition-transform group-hover:scale-110" />
-            )}
-          </Button>
         </div>
       </div>
     </header>
